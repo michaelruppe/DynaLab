@@ -4,6 +4,9 @@ void gpio_initialise() {
   pinMode(chA, INPUT);  // Use INPUT to ensure Pull-up/down resistors are disabled - else the signal from the reflectance sensor is corrupted.
   pinMode(chB, INPUT);
   pinMode(chC, INPUT);
+
+  pinMode(btnRec, INPUT_PULLUP);
+  pinMode(ledRec, OUTPUT);
 }
 
 void disable_linear_encoder() {

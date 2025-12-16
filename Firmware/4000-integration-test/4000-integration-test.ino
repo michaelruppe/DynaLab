@@ -16,6 +16,9 @@
 #include "Adafruit_TinyUSB.h"
 #include "ramdisk.h"
 #include "gpio.h"
+#include "LedControl.h"
+
+LedControl lc=LedControl(19,18,20,1);
 
 #define CAPTURE_TIMEOUT_MS 5000
 #define USB_DETACH_DELAY_MS 10
@@ -141,12 +144,13 @@ void updateBootSectorForDiskSize() {
 
 
 enum modes {
+  INITIALISED,
   STANDBY,
   CAPTURE,
   MOUNT_DRIVE
 };
-enum modes mode = STANDBY;
-enum modes last_mode = mode;
+modes mode = STANDBY;
+modes last_mode = INITIALISED;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -174,14 +178,21 @@ void setup() {
   // Set Lun ready (RAM disk is always ready)
   usb_msc.setUnitReady(true);
 
-  //  while ( !Serial ) delay(10);   // wait for native usb
-  Serial.println("Adafruit TinyUSB Mass Storage RAM Disk example");
+  // 7-segment display
+  lc.shutdown(0,false); // wakeup
+  lc.setIntensity(0,8); // medium brightness
+  lc.clearDisplay(0);
+
+
+  Serial.println("=== DynaLab Initialised ===");
 }
+
+
 
 void loop() {
   switch(mode) {
     case STANDBY:
-      mode = CAPTURE;
+      handleStandbyMode();
       break;
     case CAPTURE:
       handleCaptureMode();
@@ -193,6 +204,30 @@ void loop() {
 }
 
 
+void handleStandbyMode() {
+  if (mode != last_mode){
+    Serial.println("Standing By");
+
+    attachInterrupt(digitalPinToInterrupt(chA), encoderISR, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(chB), encoderISR, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(chC), encoderISR, CHANGE);
+    
+
+    last_mode = mode;
+  }
+  if (digitalRead(btnRec) == 0) mode = CAPTURE;
+
+  // Display live displacement
+  processEncoderChange();
+  long units = abs(positionCounter) % 10;
+  long tens = (abs(positionCounter) / 10) % 10;
+  lc.setDigit(0,0,units,false);
+  if(tens != 0) lc.setDigit(0,1,tens,false);
+  else lc.setChar(0,1,' ',false);
+
+  if (positionCounter < 0) lc.setChar(0,2,'-',false);
+  else lc.setChar(0,2,' ',false);
+}
 
 void handleCaptureMode() {
   static uint32_t time_begin;
@@ -201,14 +236,13 @@ void handleCaptureMode() {
   // Mode entry
   if (mode != last_mode) {
     Serial.println("Capturing");
+    digitalWrite(ledRec, HIGH);
     last_mode = mode;
     currentState = readEncoderState();
     previousState = currentState;
     time_begin = millis();
     num_points = 0;
-    attachInterrupt(digitalPinToInterrupt(chA), encoderISR, CHANGE);
-    attachInterrupt(digitalPinToInterrupt(chB), encoderISR, CHANGE);
-    attachInterrupt(digitalPinToInterrupt(chC), encoderISR, CHANGE);
+
   }
   
   // Process state changes
@@ -225,11 +259,14 @@ void handleCaptureMode() {
     }
   }
   
+  Serial.printf("%d  %d\n", millis(), time_begin);
+
   // Timeout check
   if (millis() - time_begin > CAPTURE_TIMEOUT_MS) {
     Serial.println("Done");
     delay(1000);
     disable_linear_encoder();
+    digitalWrite(ledRec, LOW);
     mode = MOUNT_DRIVE;
   }
 }
@@ -237,6 +274,10 @@ void handleCaptureMode() {
 void handleMountDriveMode() {
   if (mode != last_mode) {
     last_mode = MOUNT_DRIVE;
+    lc.setRow(0,2,0x3E);        // U
+    lc.setDigit(0,1,5,false);   // S
+    lc.setChar(0,0,'b',false);  // b
+
     generateCSV();
     usb_msc.begin();
     
@@ -263,7 +304,7 @@ void encoderISR() {
 void processEncoderChange() {
   currentState = readEncoderState();
   // Only process if state actually changed
-  if (currentState != previousState) {  // TODO there was an || true here - probably for uniform time sampling...
+  if (currentState != previousState) {
     int direction = getDirection(previousState, currentState);
 
     if (direction != 0) {
