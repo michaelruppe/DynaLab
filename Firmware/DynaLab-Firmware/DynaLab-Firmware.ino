@@ -1,3 +1,11 @@
+#define VERSION_MAJOR 0
+#define VERSION_MINOR 1
+
+// Create version string using preprocessor stringification
+#define STRINGIFY(x) #x
+#define TOSTRING(x) STRINGIFY(x)
+#define VERSION_STRING TOSTRING(VERSION_MAJOR) "." TOSTRING(VERSION_MINOR)
+
 #include <Arduino.h>
 #include "Adafruit_TinyUSB.h"
 #include "ramdisk.h"
@@ -93,10 +101,23 @@ void generateCSV() {
     }
   }
 
-// Update file size in Block3 directory entry. Block3, starting byte 32 defines DataFile.csv
-// Bytes 60-63: 4-bytes little-endian file size.
+// Update Block3 directory entry
+// Block3, starting byte 32 defines Data_.csv
+// Bytes 37-39: Characters 6-8 of filename (currently spaces) - generate three random alphanumeric characters to append to this file (helps avoid file-overwrites when user copies data onto PC)
+// Bytes 60-63: 4-bytes little-endian file size
 #define ROOT_DIR_BLOCK 3
+#define FILENAME_RANDOM_OFFSET 37  // Start of the 3 spaces in "DATA_   "
 #define FILE_SIZE_OFFSET 60
+
+  // Generate 3 random alphanumeric characters
+  const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const int charset_size = sizeof(charset) - 1;  // Exclude null terminator
+  randomSeed(micros());
+  for (int i = 0; i < 3; i++) {
+    msc_disk[ROOT_DIR_BLOCK][FILENAME_RANDOM_OFFSET + i] = charset[random(charset_size)];
+  }
+
+  // Update file size
   msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET] = file_size & 0xFF;
   msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 1] = (file_size >> 8) & 0xFF;
   msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 2] = (file_size >> 16) & 0xFF;
@@ -156,7 +177,7 @@ void setup() {
   gpio_initialise();
 
   // Set disk vendor id, product id and revision with string up to 8, 16, 4 characters respectively
-  usb_msc.setID("DntPanic", "Mass Storage", "1.0");
+  usb_msc.setID("DntPanic", "Mass Storage", VERSION_STRING);
 
   // Set disk size
   usb_msc.setCapacity(DISK_BLOCK_NUM, DISK_BLOCK_SIZE);

@@ -34,19 +34,8 @@
 #define LSB(x) ((x)&0xFF)
 #define MSB(x) (((x) >> 8) & 0xFF)
 
-#define README_CONTENTS \
-  "DynaLab v0.1\n\n\
-Follow these steps to run an experiment.\n\
-\n\
-Note: copy these instructions to your computer before beginning if necessary. \n\
-\n\
-1: Press the ZERO button \n\
-2: Move the mass to the desired initial displacement\n\
-3: Press the REC button (status light shows recording)\n\
-4: Release the mass and allow to oscillate.\n\
-5: Wait until REC light turns off.\n\
-6: MassSpring drive appears on host computer, contains data file."
-
+// The readme.htm file redirects to the project repo where usage and build instructions may be maintained.
+#define README_CONTENTS "<html><head><meta http-equiv=\"refresh\" content=\"0;URL='https://github.com/michaelruppe/DynaLab'\"/></head><body>Redirecting to <a href='https://github.com/michaelruppe/DynaLab'>DynaLab Documentation</a></body></html>"
 
 ///------------- FAT12 Memory map -------------//
 // Block0: Boot Sector
@@ -162,12 +151,12 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 
     // second entry is data file
-    'D', 'A', 'T', 'A', 'F', 'I', 'L', 'E', 'C', 'S', 'V', 0x20, 0x00, 0xC6,
+    'D', 'A', 'T', 'A', '_', ' ', ' ', ' ', 'C', 'S', 'V', 0x20, 0x18, 0xC6,
     0x52, 0x6D, 0x65, 0x43, 0x65, 0x43, 0x00, 0x00, 0x88, 0x6D, 0x65, 0x43,
     0x02, 0x00, 0x01, 0x00, 0x00, 0x00,
 
-    // third entry is README.TXT
-    'R', 'E', 'A', 'D', 'M', 'E', ' ', ' ', 'T', 'X', 'T', 0x20, 0x00, 0xC6,
+    // third entry is README
+    'R', 'E', 'A', 'D', 'M', 'E', ' ', ' ', 'H', 'T', 'M', 0x20, 0x18, 0xC6,
     0x52, 0x6D, 0x65, 0x43, 0x65, 0x43, 0x00, 0x00, 0x88, 0x6D, 0x65, 0x43,
     0x3D, 0x00, LSB(sizeof(README_CONTENTS) - 1), MSB(sizeof(README_CONTENTS) - 1) & 0xFF, 0x00, 0x00 },
 
