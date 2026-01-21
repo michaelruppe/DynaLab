@@ -288,38 +288,6 @@
       [
         "footprint_link_issues|1066800|482600|aafbf1c7-65aa-40ec-99fb-6d95f0b65ab9|00000000-0000-0000-0000-000000000000|||",
         "chosen component footprint matches a 1206 resistor"
-      ],
-      [
-        "footprint_link_issues|774700|3429000|aafbf1c7-65aa-40ec-99fb-6d95f0b65ab9|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "power_pin_not_driven|2108200|431800|7dcd1f11-7cea-4add-9185-b999727587fc|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
-        "Power flag not used"
-      ],
-      [
-        "power_pin_not_driven|4241800|444500|04df4746-e888-4443-8c56-44b5fef1444c|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|4432300|228600|04df4746-e888-4443-8c56-44b5fef1444c|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|4432300|279400|04df4746-e888-4443-8c56-44b5fef1444c|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|508000|3136900|7dcd1f11-7cea-4add-9185-b999727587fc|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|533400|3429000|a19be79e-5c74-4270-ba31-520343cb5fc3|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|825500|482600|a19be79e-5c74-4270-ba31-520343cb5fc3|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
-        ""
       ]
     ],
     "meta": {
@@ -744,7 +712,7 @@
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": true,
+      "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
       "sort_field": "MANUFACTURER"
