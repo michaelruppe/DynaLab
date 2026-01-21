@@ -60,8 +60,8 @@
       ],
       "drc_exclusions": [
         [
-          "lib_footprint_mismatch|283250000|238750000|5249c68e-8fa3-4323-9177-cbf91c69477d|00000000-0000-0000-0000-000000000000",
-          "Altered pin labels so that redundant connecitons not made. no need for them, and it would increase routing burden"
+          "starved_thermal|319698500|264868000|56ef6fa2-9288-48be-a097-79ee35cf20e6|29004313-13a6-4e39-bd29-ded0a8a173f3|B.Cu",
+          ""
         ]
       ],
       "meta": {
@@ -286,24 +286,20 @@
   "erc": {
     "erc_exclusions": [
       [
-        "footprint_link_issues|5041900|457200|0d15fabc-8f8f-4924-88fa-71cc92be43fa|00000000-0000-0000-0000-000000000000|||",
-        "Used other component symbol with compatible pinout."
-      ],
-      [
-        "footprint_link_issues|5283200|457200|f510c4de-3848-49c7-9b97-9a2367a7ba7f|00000000-0000-0000-0000-000000000000|||",
-        "Used other component symbol with compatible pinout."
-      ],
-      [
-        "footprint_link_issues|5537200|457200|4f6aa6ca-6059-45d0-9f1d-69a08f0be10c|00000000-0000-0000-0000-000000000000|||",
-        "Used other component symbol with compatible pinout."
+        "footprint_link_issues|1066800|482600|aafbf1c7-65aa-40ec-99fb-6d95f0b65ab9|00000000-0000-0000-0000-000000000000|||",
+        "chosen component footprint matches a 1206 resistor"
       ],
       [
         "footprint_link_issues|774700|3429000|aafbf1c7-65aa-40ec-99fb-6d95f0b65ab9|00000000-0000-0000-0000-000000000000|||",
-        "Chosen component has 1206 footprint"
+        ""
       ],
       [
         "power_pin_not_driven|2108200|431800|7dcd1f11-7cea-4add-9185-b999727587fc|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
         "Power flag not used"
+      ],
+      [
+        "power_pin_not_driven|4241800|444500|04df4746-e888-4443-8c56-44b5fef1444c|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
+        ""
       ],
       [
         "power_pin_not_driven|4432300|228600|04df4746-e888-4443-8c56-44b5fef1444c|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
@@ -314,7 +310,15 @@
         ""
       ],
       [
+        "power_pin_not_driven|508000|3136900|7dcd1f11-7cea-4add-9185-b999727587fc|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
+        ""
+      ],
+      [
         "power_pin_not_driven|533400|3429000|a19be79e-5c74-4270-ba31-520343cb5fc3|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|825500|482600|a19be79e-5c74-4270-ba31-520343cb5fc3|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
         ""
       ]
     ],
@@ -618,7 +622,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "CAD/DynaLab.step",
+      "step": "CAD/DynaLab_PCB.step",
       "svg": "",
       "vrml": ""
     },

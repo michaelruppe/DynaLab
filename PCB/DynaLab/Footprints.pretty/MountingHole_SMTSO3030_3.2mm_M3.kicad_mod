@@ -51,6 +51,7 @@
 			)
 		)
 	)
+	(attr smd)
 	(fp_circle
 		(center -2.7 0)
 		(end -2.15 0)
@@ -226,4 +227,15 @@
 		(uuid "350a34b9-defc-4d0c-aecd-e80bfcd0e96b")
 	)
 	(embedded_fonts no)
+	(model "CAD/SMTSO3030-Sinhoo.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

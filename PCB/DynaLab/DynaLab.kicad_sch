@@ -8,7 +8,7 @@
 		(title "Mass Spring Damper Lab")
 		(rev "01")
 		(company "Monash University")
-		(comment 3 "github.com/michaelruppe/mass-spring")
+		(comment 3 "github.com/michaelruppe/dynalab")
 		(comment 4 "Michael Ruppe")
 	)
 	(lib_symbols
@@ -1941,6 +1941,26 @@
 					(hide yes)
 				)
 			)
+			(property private "KLC_S3.3" "The rectangle is not a symbol body but a graphical element"
+				(at 0 -12.7 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property private "KLC_S4.1" "Some pins are on 50mil grid to make the symbol small"
+				(at 0 -15.24 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "ki_keywords" "quartz ceramic resonator oscillator"
 				(at 0 0 0)
 				(effects
@@ -2021,18 +2041,6 @@
 				)
 				(polyline
 					(pts
-						(xy 0 3.556) (xy 0 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0 -3.81) (xy 0 -3.556)
 					)
 					(stroke
@@ -2088,9 +2096,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 5.08 270)
+					(at 0 -5.08 90)
 					(length 1.27)
-					(name "2"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2108,7 +2116,8 @@
 				(pin passive line
 					(at 0 -5.08 90)
 					(length 1.27)
-					(name "4"
+					(hide yes)
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2590,433 +2599,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Display_Character:SM420561N"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -2.54 13.97 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Value" "SM420561N"
-				(at 1.27 13.97 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Display_7Segment:7SegmentLED_LTS6760_LTS6780"
-				(at 1.27 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
-				(at -12.7 12.065 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "One digit 7 segment blue LED, common cathode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "display LED 7-segment"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "7SegmentLED?LTS6760?LTS6780*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SM420561N_0_0"
-				(text "E"
-					(at -2.54 1.778 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(text "F"
-					(at -2.286 4.826 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(text "D"
-					(at -0.254 1.016 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(text "G"
-					(at 0 4.064 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(text "A"
-					(at 0.254 5.588 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(text "C"
-					(at 2.286 1.778 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(text "B"
-					(at 2.54 4.826 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-				(text "DP"
-					(at 3.556 0.254 0)
-					(effects
-						(font
-							(size 0.508 0.508)
-						)
-					)
-				)
-			)
-			(symbol "SM420561N_0_1"
-				(rectangle
-					(start -5.08 12.7)
-					(end 5.08 -12.7)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 2.794) (xy -1.778 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.842) (xy -1.524 3.81)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0.254) (xy 0.762 0.254)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 3.302) (xy 1.016 3.302)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 6.35) (xy 1.27 6.35)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 2.794) (xy 1.27 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.778 5.842) (xy 1.524 3.81)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0.254) (xy 2.54 0.254)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SM420561N_1_1"
-				(pin input line
-					(at -7.62 7.62 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 5.08 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -5.08 0)
-					(length 2.54)
-					(name "F"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -7.62 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -10.16 0)
-					(length 2.54)
-					(name "DP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 -7.62 180)
-					(length 2.54)
-					(name "CC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 -10.16 180)
-					(length 2.54)
-					(name "CC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3534,6 +3116,424 @@
 						)
 					)
 					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "DynaLab_Symbols:GS3011C"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -2.54 13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "GS3011C"
+				(at 1.27 13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Footprints:GS3011A"
+				(at 1.27 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+				(at -12.7 12.065 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "One digit 7 segment blue LED, common cathode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "display LED 7-segment"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GS3011C_0_0"
+				(text "E"
+					(at -2.54 1.778 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(text "F"
+					(at -2.286 4.826 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(text "D"
+					(at -0.254 1.016 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(text "G"
+					(at 0 4.064 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(text "A"
+					(at 0.254 5.588 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(text "C"
+					(at 2.286 1.778 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(text "B"
+					(at 2.54 4.826 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(text "DP"
+					(at 3.556 0.254 0)
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+			)
+			(symbol "GS3011C_0_1"
+				(rectangle
+					(start -5.08 12.7)
+					(end 5.08 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 2.794) (xy -1.778 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.842) (xy -1.524 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0.254) (xy 0.762 0.254)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 3.302) (xy 1.016 3.302)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 6.35) (xy 1.27 6.35)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 2.794) (xy 1.27 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 5.842) (xy 1.524 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.254) (xy 2.54 0.254)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GS3011C_1_1"
+				(pin input line
+					(at -7.62 7.62 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "F"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -7.62 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -10.16 0)
+					(length 2.54)
+					(name "DP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -7.62 180)
+					(length 2.54)
+					(name "CC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -10.16 180)
+					(length 2.54)
+					(name "CC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6909,15 +6909,49 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "M3x4mm threaded standoffs"
+	(rectangle
+		(start 124.46 76.2)
+		(end 180.34 86.36)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 38333fbe-2e41-4b61-b688-9c928a698d3c)
+	)
+	(rectangle
+		(start 125.73 49.53)
+		(end 139.7 71.12)
+		(stroke
+			(width 0)
+			(type dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 9eb85a1a-7c05-4cba-a933-1c577fb992f8)
+	)
+	(text "USB-C spec calls for 5k1 (10%) pulldown resistors\non CC1, CC2\n10k || 10k = 5k (1%) should work - optimise BOM"
 		(exclude_from_sim no)
-		(at 69.088 359.664 0)
+		(at 152.146 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "475cba60-bf25-43ab-a032-44ec410933a8")
+		(uuid "1cf9c596-9d3c-4b7d-9039-6a582fcacc28")
+	)
+	(text "M3x6mm"
+		(exclude_from_sim no)
+		(at 27.94 349.758 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2b310796-b25e-495b-8605-d5899cbe3f80")
 	)
 	(text "Resistors should be as close to RP2040 as possible"
 		(exclude_from_sim no)
@@ -6950,6 +6984,16 @@
 		)
 		(uuid "843529a1-b186-4ff9-84bc-c1afb73281c9")
 	)
+	(text "Threaded Standoffs"
+		(exclude_from_sim no)
+		(at 47.498 336.55 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "925c1043-29d3-40df-b830-1168c8105c6b")
+	)
 	(text "Components reused to\noptimise BOM. Use 1V\nreference if desired"
 		(exclude_from_sim no)
 		(at 35.306 237.744 90)
@@ -6970,9 +7014,9 @@
 		)
 		(uuid "ae658e53-1135-40ea-952c-cbac8b7cc5ea")
 	)
-	(text "M3x3mm threaded standoffs"
+	(text "SMT Solder in-place"
 		(exclude_from_sim no)
-		(at 34.29 345.186 0)
+		(at 47.498 341.376 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6999,6 +7043,16 @@
 			)
 		)
 		(uuid "d33f7705-a5f2-49b1-a65d-3c6af98cb2ac")
+	)
+	(text "M3x8mm"
+		(exclude_from_sim no)
+		(at 62.992 364.744 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d556595e-6b79-4025-81aa-57c9cbb9e126")
 	)
 	(text "V_{ref} = 1.03V"
 		(exclude_from_sim no)
@@ -7683,6 +7737,10 @@
 		(uuid "99e6d84a-0fcd-4c4b-80f9-d88f215cb91c")
 	)
 	(no_connect
+		(at 422.91 311.15)
+		(uuid "b2726727-9af7-4570-94e6-0d0035b814d5")
+	)
+	(no_connect
 		(at 422.91 306.07)
 		(uuid "c27f6d2a-17ad-4718-8da7-ebff854a7769")
 	)
@@ -8198,6 +8256,16 @@
 	)
 	(wire
 		(pts
+			(xy 417.83 311.15) (xy 422.91 311.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0786c3fb-7580-4256-9c79-63a7fde20b05")
+	)
+	(wire
+		(pts
 			(xy 351.79 190.5) (xy 351.79 195.58)
 		)
 		(stroke
@@ -8545,16 +8613,6 @@
 			(type default)
 		)
 		(uuid "194b4c60-7950-4163-925a-77a835a32f73")
-	)
-	(wire
-		(pts
-			(xy 471.17 321.31) (xy 473.71 321.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19ab9356-7023-4213-b886-48877b773f11")
 	)
 	(wire
 		(pts
@@ -9716,6 +9774,16 @@
 		)
 		(uuid "5da7bd18-5781-4841-89c6-7ca3d3fa2e31")
 	)
+	(polyline
+		(pts
+			(xy 12.7 330.2) (xy 86.36 330.2)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "5da9df90-6ee5-4f60-9b71-0cf6086a92a0")
+	)
 	(wire
 		(pts
 			(xy 424.18 191.77) (xy 424.18 196.85)
@@ -10348,16 +10416,6 @@
 	)
 	(wire
 		(pts
-			(xy 314.96 292.1) (xy 317.5 292.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e810d2e-1bb2-4730-8ffe-0016f13397d1")
-	)
-	(wire
-		(pts
 			(xy 41.91 298.45) (xy 50.8 298.45)
 		)
 		(stroke
@@ -10568,16 +10626,6 @@
 	)
 	(wire
 		(pts
-			(xy 417.83 311.15) (xy 443.23 311.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8de1ffc6-6975-4e3a-826e-affc9f642573")
-	)
-	(wire
-		(pts
 			(xy 129.54 63.5) (xy 129.54 66.04)
 		)
 		(stroke
@@ -10725,6 +10773,16 @@
 			(type default)
 		)
 		(uuid "9472fd2f-a1e2-4ba6-a726-5f90f8b1063e")
+	)
+	(polyline
+		(pts
+			(xy 86.36 330.2) (xy 86.36 406.4)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "94dfb790-262b-427e-b404-cd9dc41ecf7e")
 	)
 	(wire
 		(pts
@@ -10975,16 +11033,6 @@
 			(type default)
 		)
 		(uuid "a725eff4-44d2-42cd-b1a3-8ffddf5c1d97")
-	)
-	(wire
-		(pts
-			(xy 483.87 321.31) (xy 481.33 321.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a7c8c792-784b-4b3f-b29f-5142ef5c6e88")
 	)
 	(wire
 		(pts
@@ -11308,16 +11356,6 @@
 	)
 	(wire
 		(pts
-			(xy 443.23 311.15) (xy 443.23 321.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b72f94d8-e80a-4c54-802c-a2d5f940a8cd")
-	)
-	(wire
-		(pts
 			(xy 342.9 190.5) (xy 342.9 195.58)
 		)
 		(stroke
@@ -11358,16 +11396,6 @@
 	)
 	(wire
 		(pts
-			(xy 443.23 321.31) (xy 463.55 321.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba658464-05a5-4e85-9fa1-09e411a9a57b")
-	)
-	(wire
-		(pts
 			(xy 434.34 69.85) (xy 440.69 69.85)
 		)
 		(stroke
@@ -11395,6 +11423,16 @@
 			(type default)
 		)
 		(uuid "bbbcf1c3-b5e7-4ea6-9c76-9073a5f5a33f")
+	)
+	(polyline
+		(pts
+			(xy 133.35 71.12) (xy 133.35 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc06d82b-a0fc-498d-be66-44b3f153313c")
 	)
 	(wire
 		(pts
@@ -12956,16 +12994,6 @@
 		)
 		(uuid "bf4ebe53-07ad-47e5-acf3-d52102c96fff")
 	)
-	(label "LED_REC"
-		(at 449.58 321.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c3b77708-61c3-4d88-8e32-c242775c537d")
-	)
 	(label "DIG0"
 		(at 440.69 77.47 180)
 		(effects
@@ -13218,6 +13246,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 342.9 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "93635900-35b7-43ab-a38f-68d842901ffa")
 		)
@@ -13287,6 +13324,15 @@
 			)
 		)
 		(property "LCSC Part #" "C14663"
+			(at 450.85 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 450.85 200.66 0)
 			(effects
 				(font
@@ -13378,7 +13424,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 372.11 0)
+		(at 27.94 373.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13387,7 +13433,7 @@
 		(fields_autoplaced yes)
 		(uuid "03e321e8-f886-4901-b9a6-82fff21f89b6")
 		(property "Reference" "H4"
-			(at 29.21 370.8399 0)
+			(at 30.48 372.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13395,8 +13441,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 373.3799 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 374.6499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13404,8 +13450,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 372.11 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 373.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13413,8 +13459,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 372.11 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 373.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13423,7 +13469,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 372.11 0)
+			(at 27.94 373.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13431,8 +13477,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 372.11 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 373.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 373.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13511,6 +13566,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 441.96 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "718b193c-213c-4b17-b36f-877071ce5862")
 		)
@@ -13580,6 +13644,15 @@
 			)
 		)
 		(property "LCSC Part #" "C14663"
+			(at 433.07 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 433.07 200.66 0)
 			(effects
 				(font
@@ -13862,6 +13935,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 151.13 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "70cf4cbc-7f7f-4678-8450-b2ebc1720bf8")
 		)
@@ -13948,6 +14030,15 @@
 			)
 		)
 		(property "LCSC Part #" "C2894897"
+			(at 60.96 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 60.96 63.5 0)
 			(effects
 				(font
@@ -14070,6 +14161,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 186.69 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "05b8683d-2943-4ccb-ac47-5c8e01498f2e")
 		)
@@ -14147,6 +14247,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 351.79 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "512fa131-48c4-41ea-bbf8-640436154a73")
 		)
@@ -14163,7 +14272,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Display_Character:SM420561N")
+		(lib_id "DynaLab_Symbols:GS3011C")
 		(at 485.14 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14217,6 +14326,15 @@
 			)
 		)
 		(property "LCSC Part #" "C22462660"
+			(at 485.14 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 485.14 67.31 0)
 			(effects
 				(font
@@ -14384,6 +14502,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 172.72 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e04bfded-de41-4246-bf8b-a2a404c0500f")
 		)
@@ -14529,6 +14656,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 113.03 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9cc91dba-e0bf-43d0-b8b4-ab959faf51e2")
 		)
@@ -14605,6 +14741,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 154.94 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "7219f975-11d0-47f4-8f4f-df144d4b137a")
 		)
@@ -14640,7 +14785,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 62.23 373.38 0)
+		(at 63.5 374.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14649,7 +14794,7 @@
 		(fields_autoplaced yes)
 		(uuid "1356b502-f391-4d79-a351-0c1008f1419a")
 		(property "Reference" "H11"
-			(at 64.77 372.1099 0)
+			(at 66.04 373.3799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14657,8 +14802,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3040"
-			(at 64.77 374.6499 0)
+		(property "Value" "SMTSO3080"
+			(at 66.04 375.9199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14666,8 +14811,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 62.23 373.38 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3080_3.2mm_M3"
+			(at 63.5 374.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14675,8 +14820,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 62.23 373.38 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 63.5 374.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14685,7 +14830,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 62.23 373.38 0)
+			(at 63.5 374.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14693,8 +14838,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915635"
-			(at 62.23 373.38 0)
+		(property "LCSC Part #" "C2916369"
+			(at 63.5 374.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 63.5 374.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14738,7 +14892,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH-12mm"
+		(property "Footprint" "Button_Switch_THT:SW_SPST_Omron_B3F-40xx"
 			(at 322.58 311.15 0)
 			(effects
 				(font
@@ -14765,7 +14919,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C7470193"
+		(property "LCSC Part #" "C84931"
+			(at 322.58 316.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 322.58 316.23 0)
 			(effects
 				(font
@@ -14975,6 +15138,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 120.65 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e5dfcfee-3e32-415b-89e3-b577a059c4b0")
 		)
@@ -15041,6 +15213,15 @@
 			)
 		)
 		(property "LCSC Part #" "C133334"
+			(at 309.88 292.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 309.88 292.1 90)
 			(effects
 				(font
@@ -15122,6 +15303,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 160.02 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -15209,7 +15399,7 @@
 		(lib_id "Graphic:Logo_Open_Hardware_Large")
 		(at 455.93 388.62 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
@@ -15252,15 +15442,6 @@
 			)
 		)
 		(property "Description" "Open Hardware logo, large"
-			(at 455.93 388.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 455.93 388.62 0)
 			(effects
 				(font
@@ -15329,6 +15510,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 133.35 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e1c6158e-5e1a-4e84-9b87-03c10d10426b")
 		)
@@ -15347,12 +15537,12 @@
 	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 306.07 238.76 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2003db89-fef3-4509-a25d-b1592eb1755c")
 		(property "Reference" "SW1"
 			(at 306.07 231.14 0)
@@ -15397,6 +15587,15 @@
 			)
 		)
 		(property "LCSC Part #" "C455109"
+			(at 306.07 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 306.07 238.76 0)
 			(effects
 				(font
@@ -15679,6 +15878,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 157.48 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "66e2dc76-40a4-44dd-a19d-be381f3dd02d")
 		)
@@ -15834,6 +16042,15 @@
 			)
 		)
 		(property "LCSC Part #" "C5962"
+			(at 436.88 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 436.88 124.46 0)
 			(effects
 				(font
@@ -16009,6 +16226,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 411.48 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -16212,6 +16438,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 62.23 262.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "446b2d37-6198-445a-94bf-a602dd26f62a")
 		)
@@ -16273,6 +16508,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 29.21 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 29.21 261.62 0)
 			(effects
 				(font
@@ -16424,6 +16668,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 191.77 307.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "70cf4cbc-7f7f-4678-8450-b2ebc1720bf9")
 		)
@@ -16509,6 +16762,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 334.01 298.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b31e122-dac1-4cc4-bdf0-9e33ac4a1690")
 		)
@@ -16570,6 +16832,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 134.62 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 134.62 269.24 0)
 			(effects
 				(font
@@ -16712,6 +16983,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 151.13 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "676d19f4-c9d9-494b-8039-fa335bd36373")
 		)
@@ -16785,6 +17065,15 @@
 			)
 		)
 		(property "LCSC Part #" "C2687116"
+			(at 100.33 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 100.33 63.5 0)
 			(effects
 				(font
@@ -16874,6 +17163,15 @@
 			)
 		)
 		(property "LCSC Part #" "C5962"
+			(at 354.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 354.33 125.73 0)
 			(effects
 				(font
@@ -16997,6 +17295,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 44.45 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "7219f975-11d0-47f4-8f4f-df144d4b137b")
 		)
@@ -17094,6 +17401,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 88.9 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "28a9057d-3f6e-4619-a6b8-6fb4b1ddb914")
 		)
@@ -17163,6 +17479,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 135.89 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "837c5a22-6002-470f-b537-f7ab8820db2f")
 		)
@@ -17204,7 +17529,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH-12mm"
+		(property "Footprint" "Button_Switch_THT:SW_SPST_Omron_B3F-40xx"
 			(at 467.36 303.53 0)
 			(effects
 				(font
@@ -17231,7 +17556,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C5381278"
+		(property "LCSC Part #" "C84931"
+			(at 467.36 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 467.36 308.61 0)
 			(effects
 				(font
@@ -17306,6 +17640,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 133.35 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fdeb266e-b393-47f7-962c-bed82f1c4262")
 		)
@@ -17323,7 +17666,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 384.81 0)
+		(at 27.94 386.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17332,7 +17675,7 @@
 		(fields_autoplaced yes)
 		(uuid "467395fc-6e67-484a-b636-38c7d1037ebf")
 		(property "Reference" "H6"
-			(at 29.21 383.5399 0)
+			(at 30.48 384.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17340,8 +17683,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 386.0799 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 387.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17349,8 +17692,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 384.81 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 386.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17358,8 +17701,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 384.81 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 386.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17368,7 +17711,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 384.81 0)
+			(at 27.94 386.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17376,8 +17719,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 384.81 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 386.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17448,6 +17800,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 29.21 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1e5532c2-01ec-4988-870f-f6aeb4699cfa")
 		)
@@ -17458,92 +17819,6 @@
 			(project "Encoder with Amp"
 				(path "/e408f3f6-5db2-41f4-a4ee-1704a305cc7b"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 477.52 321.31 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "46f9f438-f40e-424a-895a-f3d15ab6bec2")
-		(property "Reference" "D1"
-			(at 479.1075 313.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "REC"
-			(at 479.1075 316.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 477.52 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 477.52 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 477.52 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 477.52 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C965799"
-			(at 477.52 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "735f048b-7964-471c-a3e8-ac67d708dbbf")
-		)
-		(pin "1"
-			(uuid "07c38afd-c161-4c67-9847-0eedd4d8ae9a")
-		)
-		(instances
-			(project "Encoder with Amp"
-				(path "/e408f3f6-5db2-41f4-a4ee-1704a305cc7b"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -17679,6 +17954,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 96.52 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "66e2dc76-40a4-44dd-a19d-be381f3dd02e")
 		)
@@ -17776,6 +18060,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 36.83 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "38bdfbbd-321c-442e-b502-b16be50d9c3e")
 		)
@@ -17792,7 +18085,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Display_Character:SM420561N")
+		(lib_id "DynaLab_Symbols:GS3011C")
 		(at 534.67 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17846,6 +18139,15 @@
 			)
 		)
 		(property "LCSC Part #" "C22462660"
+			(at 534.67 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 534.67 67.31 0)
 			(effects
 				(font
@@ -18077,6 +18379,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 133.35 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "250c1c72-650b-48e4-8861-ddd4e0e4d80b")
 		)
@@ -18288,6 +18599,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 417.83 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a8f2c7af-835d-431b-8544-b1193a60eadf")
 		)
@@ -18322,7 +18642,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "220"
 			(at 203.2 62.2299 0)
 			(effects
 				(font
@@ -18355,6 +18675,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 200.66 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -18428,6 +18757,15 @@
 			)
 		)
 		(property "LCSC Part #" "C49443603"
+			(at 424.18 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 424.18 77.47 0)
 			(effects
 				(font
@@ -18519,7 +18857,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 62.23 386.08 0)
+		(at 63.5 387.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18528,7 +18866,7 @@
 		(fields_autoplaced yes)
 		(uuid "5629c8c1-667d-49e1-8dc9-1d4c1eb5562c")
 		(property "Reference" "H9"
-			(at 64.77 384.8099 0)
+			(at 66.04 386.0799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18536,8 +18874,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3040"
-			(at 64.77 387.3499 0)
+		(property "Value" "SMTSO3080"
+			(at 66.04 388.6199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18545,8 +18883,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 62.23 386.08 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3080_3.2mm_M3"
+			(at 63.5 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18554,8 +18892,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 62.23 386.08 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 63.5 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18564,7 +18902,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 62.23 386.08 0)
+			(at 63.5 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18572,8 +18910,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915635"
-			(at 62.23 386.08 0)
+		(property "LCSC Part #" "C2916369"
+			(at 63.5 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 63.5 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18644,6 +18991,15 @@
 			)
 		)
 		(property "LCSC Part #" "C5962"
+			(at 400.05 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 400.05 133.35 0)
 			(effects
 				(font
@@ -18757,6 +19113,15 @@
 			)
 		)
 		(property "LCSC Part #" "C5962"
+			(at 400.05 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 400.05 87.63 0)
 			(effects
 				(font
@@ -19074,6 +19439,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 74.93 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "120935ff-c0e7-45d3-a0d1-e4f619570db1")
 		)
@@ -19141,6 +19515,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 29.21 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 29.21 251.46 0)
 			(effects
 				(font
@@ -19218,6 +19601,15 @@
 			)
 		)
 		(property "LCSC Part #" "C14663"
+			(at 278.13 240.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 278.13 240.03 90)
 			(effects
 				(font
@@ -19308,71 +19700,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 317.5 292.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6d00cc4f-37fc-44aa-8fc7-ffe64e9eb262")
-		(property "Reference" "#PWR044"
-			(at 317.5 298.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 317.5 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 317.5 292.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 317.5 292.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 317.5 292.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "964550ce-372f-4ad9-b3a0-9a774dbd3c0f")
-		)
-		(instances
-			(project "Encoder with Amp"
-				(path "/e408f3f6-5db2-41f4-a4ee-1704a305cc7b"
-					(reference "#PWR044")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 120.65 203.2 0)
 		(unit 1)
@@ -19419,6 +19746,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 120.65 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 120.65 203.2 0)
 			(effects
 				(font
@@ -19559,6 +19895,15 @@
 			)
 		)
 		(property "LCSC Part #" "C14663"
+			(at 34.29 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 34.29 261.62 0)
 			(effects
 				(font
@@ -19764,6 +20109,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 133.35 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ed07eb2a-4848-43c8-bf8c-e873799d3927")
 		)
@@ -19843,6 +20197,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 121.92 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "70cf4cbc-7f7f-4678-8450-b2ebc1720bfa")
 		)
@@ -19878,7 +20241,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 378.46 0)
+		(at 27.94 379.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19887,7 +20250,7 @@
 		(fields_autoplaced yes)
 		(uuid "7d1fc1d8-0a19-4ee1-bc1a-97e718109c55")
 		(property "Reference" "H5"
-			(at 29.21 377.1899 0)
+			(at 30.48 378.4599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19895,8 +20258,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 379.7299 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 380.9999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19904,8 +20267,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 378.46 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 379.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19913,8 +20276,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 378.46 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 379.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19923,7 +20286,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 378.46 0)
+			(at 27.94 379.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19931,8 +20294,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 378.46 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 379.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 379.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19996,6 +20368,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 184.15 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 184.15 271.78 0)
 			(effects
 				(font
@@ -20266,6 +20647,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 62.23 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "88e2a520-6acc-4677-9266-54ccda1045f2")
 		)
@@ -20283,7 +20673,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 353.06 0)
+		(at 27.94 354.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20292,7 +20682,7 @@
 		(fields_autoplaced yes)
 		(uuid "84b1f7e7-d255-4937-9b3e-36e2d491540a")
 		(property "Reference" "H1"
-			(at 29.21 351.7899 0)
+			(at 30.48 353.0599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20300,8 +20690,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 354.3299 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 355.5999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20309,8 +20699,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 353.06 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20318,8 +20708,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 353.06 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20328,7 +20718,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 353.06 0)
+			(at 27.94 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20336,8 +20726,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 353.06 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20408,6 +20807,15 @@
 			)
 		)
 		(property "LCSC Part #" "C5962"
+			(at 400.05 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 400.05 110.49 0)
 			(effects
 				(font
@@ -20521,6 +20929,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 149.86 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "329597d6-0fc9-499a-a1fe-55f6382567b9")
 		)
@@ -20592,6 +21009,15 @@
 			)
 		)
 		(property "LCSC Part #" "C14663"
+			(at 60.96 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 60.96 306.07 0)
 			(effects
 				(font
@@ -20734,6 +21160,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 288.29 298.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "55564e8f-bda5-4a36-90ae-6702869fa19e")
 		)
@@ -20796,6 +21231,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 184.15 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 184.15 238.76 0)
 			(effects
 				(font
@@ -20872,6 +21316,15 @@
 			)
 		)
 		(property "LCSC Part #" "C9418"
+			(at 69.85 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 69.85 306.07 0)
 			(effects
 				(font
@@ -20965,6 +21418,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 288.29 285.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e0a326b1-d780-45eb-af78-7a9e0a63d98f")
 		)
@@ -21049,7 +21511,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 365.76 0)
+		(at 27.94 367.03 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21058,7 +21520,7 @@
 		(fields_autoplaced yes)
 		(uuid "91c851e3-02c5-4b57-8727-4a53a241011d")
 		(property "Reference" "H3"
-			(at 29.21 364.4899 0)
+			(at 30.48 365.7599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21066,8 +21528,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 367.0299 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 368.2999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21075,8 +21537,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 365.76 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 367.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21084,8 +21546,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 365.76 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 367.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21094,7 +21556,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 365.76 0)
+			(at 27.94 367.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21102,8 +21564,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 365.76 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 367.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 367.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21122,7 +21593,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 397.51 0)
+		(at 27.94 398.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21131,7 +21602,7 @@
 		(fields_autoplaced yes)
 		(uuid "93051c4f-4c51-479d-8584-41728ca13cb9")
 		(property "Reference" "H8"
-			(at 29.21 396.2399 0)
+			(at 30.48 397.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21139,8 +21610,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 398.7799 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 400.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21148,8 +21619,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 397.51 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 398.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21157,8 +21628,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 397.51 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 398.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21167,7 +21638,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 397.51 0)
+			(at 27.94 398.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21175,8 +21646,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 397.51 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 398.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 398.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21520,6 +22000,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 271.78 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "7"
 			(uuid "26211c77-2610-444f-bf65-e9b429643ee0")
 		)
@@ -21607,6 +22096,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 406.4 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "de5fbaf3-26ce-446d-a1e0-2625c308f0c5")
 		)
@@ -21672,6 +22170,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 321.31 238.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -21817,6 +22324,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 468.63 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "03330781-1166-45ec-b5f8-a144c118bb78")
 		)
@@ -21834,7 +22350,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 391.16 0)
+		(at 27.94 392.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21843,7 +22359,7 @@
 		(fields_autoplaced yes)
 		(uuid "a05b171e-a934-45b8-8cdf-82e3972c73fc")
 		(property "Reference" "H7"
-			(at 29.21 389.8899 0)
+			(at 30.48 391.1599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21851,8 +22367,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 392.4299 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 393.6999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21860,8 +22376,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 391.16 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 392.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21869,8 +22385,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 391.16 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 392.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21879,7 +22395,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 391.16 0)
+			(at 27.94 392.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21887,8 +22403,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 391.16 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 392.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 392.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21951,6 +22476,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 396.24 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 396.24 57.15 0)
 			(effects
 				(font
@@ -22028,6 +22562,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 86.36 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "403439f6-cf5d-4f71-8813-5705aaf8770d")
 		)
@@ -22090,6 +22633,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 184.15 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 184.15 205.74 0)
 			(effects
 				(font
@@ -22239,6 +22791,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 106.68 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9b30eca6-01b9-47c5-b250-53597bf1e8be")
 		)
@@ -22256,7 +22817,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 62.23 379.73 0)
+		(at 63.5 381 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22265,7 +22826,7 @@
 		(fields_autoplaced yes)
 		(uuid "ac3f1d19-40f7-4bde-a82f-147b8e1d7224")
 		(property "Reference" "H10"
-			(at 64.77 378.4599 0)
+			(at 66.04 379.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22273,8 +22834,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3040"
-			(at 64.77 380.9999 0)
+		(property "Value" "SMTSO3080"
+			(at 66.04 382.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22282,8 +22843,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 62.23 379.73 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3080_3.2mm_M3"
+			(at 63.5 381 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22291,8 +22852,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 62.23 379.73 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 63.5 381 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22301,7 +22862,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 62.23 379.73 0)
+			(at 63.5 381 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22309,8 +22870,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915635"
-			(at 62.23 379.73 0)
+		(property "LCSC Part #" "C2916369"
+			(at 63.5 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 63.5 381 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22373,6 +22943,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 138.43 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 138.43 203.2 0)
 			(effects
 				(font
@@ -22450,6 +23029,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 153.67 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d5c468c9-9dd7-4a3d-9cb3-83cac3d5c9e9")
 		)
@@ -22460,73 +23048,6 @@
 			(project "Encoder with Amp"
 				(path "/e408f3f6-5db2-41f4-a4ee-1704a305cc7b"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 467.36 321.31 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b3e68a99-c0b7-41b0-9d73-7164bc63975a")
-		(property "Reference" "R26"
-			(at 467.36 314.96 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "220"
-			(at 467.36 317.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 467.36 323.088 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 467.36 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 467.36 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a59790d-8a85-4c04-b767-23ea21c88ad7")
-		)
-		(pin "2"
-			(uuid "8c9c7f7b-c770-46da-aa11-88814a4a8cb4")
-		)
-		(instances
-			(project "Encoder with Amp"
-				(path "/e408f3f6-5db2-41f4-a4ee-1704a305cc7b"
-					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -22650,6 +23171,15 @@
 			)
 		)
 		(property "LCSC Part #" "C9418"
+			(at 104.14 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 104.14 269.24 0)
 			(effects
 				(font
@@ -22810,6 +23340,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 168.91 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d3a378c1-894b-47cf-a085-b4b2c064190d")
 		)
@@ -22879,6 +23418,15 @@
 			)
 		)
 		(property "LCSC Part #" "C14663"
+			(at 459.74 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 459.74 200.66 0)
 			(effects
 				(font
@@ -23079,6 +23627,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 170.18 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 170.18 231.14 0)
 			(effects
 				(font
@@ -23296,6 +23853,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 415.29 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "62e97ec3-5003-4d25-95a3-de00d1950a85")
 		)
@@ -23365,6 +23931,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 86.36 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "17d3f741-3e04-4ace-ab8f-500897102a58")
 		)
@@ -23382,7 +23957,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 62.23 368.3 0)
+		(at 63.5 369.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23391,7 +23966,7 @@
 		(fields_autoplaced yes)
 		(uuid "c8f08c4b-9c63-4c70-802e-04550ec83144")
 		(property "Reference" "H12"
-			(at 64.77 367.0299 0)
+			(at 66.04 368.2999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23399,8 +23974,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3040"
-			(at 64.77 369.5699 0)
+		(property "Value" "SMTSO3080"
+			(at 66.04 370.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23408,8 +23983,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 62.23 368.3 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3080_3.2mm_M3"
+			(at 63.5 369.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23417,8 +23992,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 62.23 368.3 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 63.5 369.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23427,7 +24002,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 62.23 368.3 0)
+			(at 63.5 369.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23435,8 +24010,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915635"
-			(at 62.23 368.3 0)
+		(property "LCSC Part #" "C2916369"
+			(at 63.5 369.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 63.5 369.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23574,6 +24158,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 120.65 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e5dfcfee-3e32-415b-89e3-b577a059c4b5")
 		)
@@ -23640,6 +24233,15 @@
 			)
 		)
 		(property "LCSC Part #" "C81632"
+			(at 74.93 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 74.93 236.22 0)
 			(effects
 				(font
@@ -23722,6 +24324,15 @@
 			)
 		)
 		(property "LCSC Part #" "C32901"
+			(at 152.4 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 152.4 238.76 0)
 			(effects
 				(font
@@ -23817,6 +24428,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 29.21 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bdcbc755-e25e-4578-88da-02ed5be9a78a")
 		)
@@ -23886,6 +24506,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 29.21 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "88a3c890-4bbb-42ca-8439-6264aa7ed23c")
 		)
@@ -23947,6 +24576,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 62.23 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 62.23 196.85 0)
 			(effects
 				(font
@@ -24153,6 +24791,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 426.72 236.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ba2ebb67-7f39-45f6-9796-addfcb1b5fb9")
 		)
@@ -24222,6 +24869,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 86.36 262.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "23318faa-788a-4f56-861f-7265230ffa37")
 		)
@@ -24239,7 +24895,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 26.67 359.41 0)
+		(at 27.94 360.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24248,7 +24904,7 @@
 		(fields_autoplaced yes)
 		(uuid "e0ed06bc-9ba5-49a2-a2a0-c8d913eec0e0")
 		(property "Reference" "H2"
-			(at 29.21 358.1399 0)
+			(at 30.48 359.4099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24256,8 +24912,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMTSO3030"
-			(at 29.21 360.6799 0)
+		(property "Value" "SMTSO3060"
+			(at 30.48 361.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24265,8 +24921,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Footprints:MountingHole_SMTSO3030_3.2mm_M3"
-			(at 26.67 359.41 0)
+		(property "Footprint" "Footprints:MountingHole_SMTSO3060_3.2mm_M3"
+			(at 27.94 360.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24274,8 +24930,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "./Datasheet/SMTSO.pdf"
-			(at 26.67 359.41 0)
+		(property "Datasheet" "../Datasheet/SMTSO.pdf"
+			(at 27.94 360.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24284,7 +24940,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 26.67 359.41 0)
+			(at 27.94 360.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24292,8 +24948,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2915308"
-			(at 26.67 359.41 0)
+		(property "LCSC Part #" "C2915637"
+			(at 27.94 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 27.94 360.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24371,6 +25036,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 175.26 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5c25951f-d734-48c4-a68a-3871e13bcc40")
 		)
@@ -24440,6 +25114,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 356.87 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -24577,6 +25260,15 @@
 			)
 		)
 		(property "LCSC Part #" "C9418"
+			(at 104.14 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 104.14 203.2 0)
 			(effects
 				(font
@@ -24850,6 +25542,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 386.08 283.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "93694531-e266-40ac-9ace-c449da0edae2")
 		)
@@ -25081,6 +25782,15 @@
 				)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 426.72 242.57 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e04f9aa6-fc49-432b-b436-cbcf078f52a2")
 		)
@@ -25091,73 +25801,6 @@
 			(project "Encoder with Amp"
 				(path "/e408f3f6-5db2-41f4-a4ee-1704a305cc7b"
 					(reference "R24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 483.87 321.31 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0fbf843-78c0-44ad-8e54-7b05d9d88b76")
-		(property "Reference" "#PWR042"
-			(at 490.22 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 487.68 321.3099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 483.87 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 483.87 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 483.87 321.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4fdd0037-b7f8-4b01-aac3-90e217af9ba7")
-		)
-		(instances
-			(project "Encoder with Amp"
-				(path "/e408f3f6-5db2-41f4-a4ee-1704a305cc7b"
-					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -25225,6 +25868,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" ""
+			(at 424.18 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a6895580-40e0-4bc3-9262-3e90c34deb42")
 		)
@@ -25241,7 +25893,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Display_Character:SM420561N")
+		(lib_id "DynaLab_Symbols:GS3011C")
 		(at 509.27 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -25295,6 +25947,15 @@
 			)
 		)
 		(property "LCSC Part #" "C22462660"
+			(at 509.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 509.27 67.31 0)
 			(effects
 				(font
@@ -25462,7 +26123,16 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C965804"
+		(property "LCSC Part #" "C965807"
+			(at 200.66 52.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 200.66 52.07 90)
 			(effects
 				(font
@@ -25540,6 +26210,15 @@
 			)
 		)
 		(property "LCSC Part #" "C81632"
+			(at 74.93 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 74.93 269.24 0)
 			(effects
 				(font
@@ -25688,6 +26367,15 @@
 			)
 		)
 		(property "LCSC Part #" "C9418"
+			(at 104.14 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
 			(at 104.14 236.22 0)
 			(effects
 				(font
