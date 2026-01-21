@@ -7,6 +7,8 @@
 # Compiled binaries
 *build/
 
+
+
 # Temporary files
 *.000
 *.bak
@@ -27,6 +29,7 @@ _autosave-*
 fp-info-cache
 ~*.lck
 \#auto_saved_files#
+*.log
 
 # Netlist files (exported from Eeschema)
 *.net
