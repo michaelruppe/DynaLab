@@ -33,7 +33,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+		(property "Datasheet" "../Datasheet/GS3011C.pdf"
 			(at -12.7 12.065 0)
 			(effects
 				(font

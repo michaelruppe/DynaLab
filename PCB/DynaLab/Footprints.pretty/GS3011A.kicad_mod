@@ -18,7 +18,7 @@
 		)
 	)
 	(property "Value" "GS3011A"
-		(at 0 1.25 0)
+		(at 0 9 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "02d90e57-0f63-4c59-8d81-63cb37e7bd34")
@@ -56,6 +56,107 @@
 		)
 	)
 	(attr smd)
+	(fp_line
+		(start -4 7.6)
+		(end -4 8.2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f4f3cdea-7714-4d41-a53f-847a90ea253f")
+	)
+	(fp_line
+		(start -4 8.2)
+		(end -3.4 8.2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a7248ce0-17ba-4e27-a9d0-4ca9523e8106")
+	)
+	(fp_line
+		(start -1.8 2.6)
+		(end -1.6 0.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7f4e0fbb-aadd-4e5a-b670-9391435ee3fc")
+	)
+	(fp_line
+		(start -1.6 -0.6)
+		(end -1.4 -2.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "5b40a9d3-9dad-46aa-8b6c-fc6ccde9ac59")
+	)
+	(fp_line
+		(start -1.2 0)
+		(end 1 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6a53140a-545e-4eee-9427-9881bceca9c7")
+	)
+	(fp_line
+		(start -0.9 -3.2)
+		(end 1.3 -3.2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f356ce04-86de-412f-aba7-9727cef96080")
+	)
+	(fp_line
+		(start 0.7 3.2)
+		(end -1.5 3.2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "35610b6b-06e7-4ed2-b0b1-ebeb4d61ae00")
+	)
+	(fp_line
+		(start 1.2 2.8)
+		(end 1.4 0.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "39108c7f-d0cc-4c74-a8e4-dcf83fa8a73c")
+	)
+	(fp_line
+		(start 1.4 -0.4)
+		(end 1.6 -2.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0a18953c-ad83-4a66-a154-0e37dd676ea2")
+	)
+	(fp_circle
+		(center 2 3.2)
+		(end 2.2 3.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "15226bbb-b0c4-486c-a9ad-4b8b4dddfa86")
+	)
 	(fp_rect
 		(start -3.9 -8)
 		(end 3.9 8)
@@ -68,7 +169,7 @@
 		(uuid "1e7f58ed-eb5f-40b7-b12c-fbd3f0f5c495")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 -1.5 0)
+		(at 0 -9 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "e407e8b6-9faa-45e2-ae33-987350fc1616")
@@ -150,4 +251,15 @@
 		(uuid "947a8cbe-166e-4d49-b8df-8e95cc37ab96")
 	)
 	(embedded_fonts no)
+	(model "./packages3D/028_7seg.stp"
+		(offset
+			(xyz -3.75 -6.75 0)
+		)
+		(scale
+			(xyz 0.95 1 1.2)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
 )

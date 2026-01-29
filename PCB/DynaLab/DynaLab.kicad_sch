@@ -3157,7 +3157,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+			(property "Datasheet" "../Datasheet/GS3011C.pdf"
 				(at -12.7 12.065 0)
 				(effects
 					(font
@@ -15677,7 +15677,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+		(property "Datasheet" "../Datasheet/GS3011C.pdf"
 			(at 472.44 55.245 0)
 			(effects
 				(font
@@ -19664,7 +19664,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+		(property "Datasheet" "../Datasheet/GS3011C.pdf"
 			(at 521.97 55.245 0)
 			(effects
 				(font
@@ -28084,7 +28084,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+		(property "Datasheet" "../Datasheet/GS3011C.pdf"
 			(at 496.57 55.245 0)
 			(effects
 				(font
